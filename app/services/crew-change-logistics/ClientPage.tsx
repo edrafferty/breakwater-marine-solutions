@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
-import crewChangeImg from '@/public/services/crew_change.jpg'
+import crewChangeImg from '@/public/services/crew_boat.jpg'
 
 const services = [
   { title: 'Crew Transportation', description: 'Ground transport from vessel to airport or accommodation.' },
