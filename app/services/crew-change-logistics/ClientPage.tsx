@@ -12,7 +12,7 @@ const services = [
   { title: 'Accommodation Booking', description: 'Trusted hotels near port and airport hubs.' },
   { title: 'Flight & Transit Coordination', description: 'Timely bookings and full crew itinerary management.' },
   { title: 'Offshore Transfers', description: 'Launch boat or helicopter transfers to offshore assets.' },
-  { title: '24/7 Crew Support', description: 'We are on call to assist with urgent crew change needs.' },
+  { title: '24/7 Crew Support', description: 'We&apos;re on call to assist with urgent crew change needs.' },
 ]
 
 const testimonials = [
@@ -62,7 +62,7 @@ export default function CrewChangeClientPage() {
               Seamless Crew Change & Logistics
             </h1>
             <p className="text-white text-lg md:text-xl max-w-2xl mx-auto">
-              Ensuring timely, safe, and compliant crew movements across Eastern Canada’s ports.
+              Ensuring timely, safe, and compliant crew movements across Eastern Canada&apos;s ports.
             </p>
           </motion.div>
         </div>

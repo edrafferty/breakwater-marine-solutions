@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import OffshoreSupportClientPage from '../crew-change-logistics/ClientPage'
+import OffshoreSupportClientPage from './ClientPage'
 
 export const metadata: Metadata = {
   title: 'Offshore Support | Breakwater Marine Solutions',
