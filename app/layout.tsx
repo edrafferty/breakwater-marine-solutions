@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   manifest: '/site.webmanifest',
-  // ✅ Add this:
   other: {
     'google-site-verification': 'Z1aJkW-sHh_En-TTfaALqBJCjEDIfEeLjFWB--zWwq4',
+    'msvalidate.01': 'E1B83C9ED1EC20EEB821A52880E66D92', // ✅ Bing verification tag
   },
 }
 
