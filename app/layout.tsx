@@ -5,7 +5,6 @@ import { Inter } from 'next/font/google'
 import { Metadata } from 'next'
 import Nav from '@/components/Nav'
 import { Footer } from '@/components/footer'
-import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,14 +23,15 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   manifest: '/site.webmanifest',
+  // ✅ Add this:
+  other: {
+    'google-site-verification': 'Z1aJkW-sHh_En-TTfaALqBJCjEDIfEeLjFWB--zWwq4',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <Head>
-        <meta name="google-site-verification" content="Z1aJkW-sHh_En-TTfaALqBJCjEDIfEeLjFWB--zWwq4" />
-      </Head>
       <body className={`${inter.className} bg-white text-gray-900`}>
         <Nav />
         <main className="min-h-screen">{children}</main>
