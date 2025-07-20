@@ -1,4 +1,4 @@
-// app/services/crew-change-logistics/page.tsx
+'use client'// app/services/crew-change-logistics/page.tsx
 
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
