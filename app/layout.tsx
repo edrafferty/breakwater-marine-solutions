@@ -30,11 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <Head>
-        {/* Google Search Console verification */}
-        <meta
-          name="google-site-verification"
-          content="Z1aJkW-sHh_En-TTfaALqBJCjEDIfEeLjFWB--zWwq4"
-        />
+        <meta name="google-site-verification" content="Z1aJkW-sHh_En-TTfaALqBJCjEDIfEeLjFWB--zWwq4" />
       </Head>
       <body className={`${inter.className} bg-white text-gray-900`}>
         <Nav />
