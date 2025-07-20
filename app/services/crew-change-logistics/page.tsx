@@ -1,4 +1,4 @@
-'use client'
+// app/services/crew-change-logistics/page.tsx
 
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -184,7 +184,7 @@ export default function CrewChangeLogisticsPage() {
           </p>
           <Button>
             <a href="/contact" className="w-full h-full inline-block">
-                Contact Us
+              Contact Us
             </a>
           </Button>
         </motion.div>
