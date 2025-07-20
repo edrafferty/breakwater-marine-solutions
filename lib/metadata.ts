@@ -1,38 +1,48 @@
-// lib/metadata.ts
+// app/lib/metadata.ts
+import type { Metadata } from 'next'
 
-export const defaultMetadata = {
-  title: "Breakwater Marine Solutions",
-  description: "Calming the water for your port calls — Port Agency and Marine Logistics in Eastern Canada.",
+export const defaultMetadata: Metadata = {
+  title: 'Breakwater Marine Solutions',
+  description: 'Breakwater Marine Solutions delivers expert marine agency services across Eastern Canada.',
   keywords: [
-    "Breakwater Marine",
-    "Port Agency Canada",
-    "Marine Logistics",
-    "Eastern Canada Shipping",
-    "Vessel Husbandry",
-    "Ice Navigation Support",
-    "Heavy Lift",
-    "Wind Energy Logistics"
+    'marine agency',
+    'port agency',
+    'shipping services',
+    'Eastern Canada marine logistics',
+    'Breakwater Marine',
+    'crew change',
+    'cargo coordination',
+    'offshore wind support',
+    'ice navigation services',
   ],
+  authors: [{ name: 'Breakwater Marine Solutions', url: 'https://www.breakwatermarine.ca' }],
+  creator: 'Breakwater Marine Solutions',
+  metadataBase: new URL('https://www.breakwatermarine.ca'),
   openGraph: {
-    title: "Breakwater Marine Solutions",
-    description: "Calming the water for your port calls.",
-    url: "https://breakwatermarine.ca",
-    siteName: "Breakwater Marine Solutions",
+    title: 'Breakwater Marine Solutions',
+    description: 'Delivering expert marine logistics and agency support in Eastern Canada.',
+    url: 'https://www.breakwatermarine.ca',
+    siteName: 'Breakwater Marine Solutions',
+    type: 'website',
     images: [
       {
-        url: "/opengraph-image.jpg",
+        url: '/opengraph-image.png',
         width: 1200,
         height: 630,
-        alt: "Breakwater Marine Solutions",
+        alt: 'Breakwater Marine Solutions',
       },
     ],
-    locale: "en_CA",
-    type: "website",
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Breakwater Marine Solutions",
-    description: "Calming the water for your port calls.",
-    images: ["/opengraph-image.jpg"],
+    card: 'summary_large_image',
+    title: 'Breakwater Marine Solutions',
+    description: 'Expert port agency and marine support services across Eastern Canada.',
+    images: ['/opengraph-image.png'],
+    creator: '@breakwatermarine', // optional: update to your real handle
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
 }
