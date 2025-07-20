@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://breakwatermarine.ca
+
+# Sitemaps
+Sitemap: https://breakwatermarine.ca/sitemap.xml
