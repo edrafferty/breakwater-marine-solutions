@@ -4,12 +4,16 @@ import { MapContainer, TileLayer, Marker, Tooltip } from 'react-leaflet'
 import L, { LatLngExpression, LeafletMouseEvent } from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 
-// Fix default marker icons (this prevents missing marker icons)
-delete (L.Icon.Default.prototype as any)._getIconUrl
+// Properly import marker assets (TypeScript + Webpack safe)
+import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png'
+import markerIcon from 'leaflet/dist/images/marker-icon.png'
+import markerShadow from 'leaflet/dist/images/marker-shadow.png'
+
+// Fix missing default icons
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
-  iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
-  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+  iconRetinaUrl: markerIcon2x.src,
+  iconUrl: markerIcon.src,
+  shadowUrl: markerShadow.src,
 })
 
 // Define port data structure
@@ -94,7 +98,7 @@ const ports: Port[] = [
   },
   {
     name: 'Belledune, NB',
-    position: [47.90, -65.89],
+    position: [47.9, -65.89],
     cargo: [
       'Aggregates', 'Coal', 'Petcoke', 'Gypsum', 'Heavy Lifts', 'Salt', 'Sand',
       'Slag', 'Sugar', 'Wind Components', 'Wood Chips/Pellets',
@@ -102,7 +106,7 @@ const ports: Port[] = [
   },
   {
     name: 'Bayside, NB',
-    position: [45.06, -67.10],
+    position: [45.06, -67.1],
     cargo: ['Aggregates', 'Wind Components'],
   },
   {
@@ -112,7 +116,7 @@ const ports: Port[] = [
   },
   {
     name: 'Summerside, PEI',
-    position: [46.40, -63.78],
+    position: [46.4, -63.78],
     cargo: ['Aggregates', 'Fertilizer'],
   },
   {
@@ -141,14 +145,14 @@ export default function InteractiveMap() {
         url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>'
       />
-      {ports.map((port: Port) => (
+      {ports.map((port) => (
         <Marker
           key={port.name}
           position={port.position}
           eventHandlers={{
-            click: (e: LeafletMouseEvent) => {
+            click: (_e: LeafletMouseEvent) => {
               console.log(`Map click: ${port.name}`)
-              // TODO: Replace with analytics call
+              // TODO: Replace with real analytics call
             },
           }}
         >
