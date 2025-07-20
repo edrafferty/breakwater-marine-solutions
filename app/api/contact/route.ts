@@ -1,42 +1,33 @@
-import { NextResponse } from 'next/server'
-import { Resend } from 'resend'
+import { NextResponse } from 'next/server';
+import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   try {
-    const { name, email, message, botField } = await req.json()
+    const body = await req.json();
+    const { name, email, message } = body;
 
-    // 🚫 Block spam if honeypot field is filled (even with whitespace)
-    if (botField && botField.trim() !== '') {
-      return NextResponse.json({ success: true })
-    }
-
-    // ✅ Basic validation
     if (!name || !email || !message) {
-      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
+      return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
     }
 
     const data = await resend.emails.send({
-      from: 'Breakwater Marine Solutions <no-reply@breakwatermarine.ca>',
+      from: 'Breakwater Marine Contact Form <onboarding@resend.dev>',
       to: ['ops@breakwatermarine.ca'],
       subject: 'New Contact Form Submission',
-      reply_to: email,
+      replyTo: email, // ✅ FIXED here
       html: `
         <h2>New Message from ${name}</h2>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong><br/>${message.replace(/\n/g, '<br/>')}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
       `,
-    })
+    });
 
-    if (data.error) {
-      console.error('Resend API error:', data.error)
-      return NextResponse.json({ error: 'Failed to send email' }, { status: 500 })
-    }
-
-    return NextResponse.json({ success: true })
+    return NextResponse.json(data);
   } catch (error) {
-    console.error('Contact form error:', error)
-    return NextResponse.json({ error: 'Something went wrong' }, { status: 500 })
+    console.error('[CONTACT_API_ERROR]', error);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }
