@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function HomePage() {
   const services = [
@@ -110,12 +111,16 @@ export default function HomePage() {
         className="relative py-24 px-4"
         style={{ backgroundAttachment: 'fixed' }}
       >
-        <div
-          className="absolute inset-0 opacity-20 bg-cover bg-center z-0"
-          style={{
-            backgroundImage: "url('/services/over_bow.jpg')",
-          }}
-        ></div>
+        <div className="absolute inset-0 opacity-20 z-0">
+          <Image
+            src="/services/over_bow.jpg"
+            alt="Background"
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+          />
+        </div>
 
         <div className="relative max-w-7xl mx-auto z-10">
           <h2 className="text-4xl font-bold text-blue-900 text-center lg:text-left mb-12">
@@ -132,11 +137,13 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <div className="overflow-hidden">
-                  <img
+                <div className="relative w-full h-64">
+                  <Image
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-300"
+                    fill
+                    className="object-cover transform group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
                 <div className="p-6 text-center">

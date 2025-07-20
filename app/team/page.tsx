@@ -67,7 +67,7 @@ export default function TeamPage() {
             <section className="text-center border-t border-gray-200 pt-12 mt-12">
         <h2 className="text-2xl font-bold text-blue-900 mb-4">Join Our Team</h2>
         <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-6">
-          Passionate about maritime logistics? We're always on the lookout for talented individuals to join our growing team.
+          Passionate about maritime logistics? We&apos;re always on the lookout for talented individuals to join our growing team.
         </p>
         <a
           href="mailto:careers@breakwatermarine.ca"

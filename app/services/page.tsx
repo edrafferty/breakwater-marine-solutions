@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import Image from "next/image"
 import { defaultMetadata } from "@/lib/metadata"
 
 export const metadata: Metadata = {
@@ -71,10 +72,13 @@ export default function ServicesPage() {
         {/* ✅ Background image wrapper */}
         <div className="relative">
           <div className="absolute inset-0">
-            <img
+            <Image
               src="/services/over_bow.jpg"
               alt="Background"
-              className="w-full h-full object-cover opacity-10"
+              fill
+              className="object-cover opacity-10"
+              sizes="100vw"
+              priority
             />
           </div>
 
@@ -85,11 +89,15 @@ export default function ServicesPage() {
                 key={title}
                 className="relative group overflow-hidden rounded-xl shadow-lg bg-white"
               >
-                <img
-                  src={image}
-                  alt={title}
-                  className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-300"
-                />
+                <div className="relative w-full h-64">
+                  <Image
+                    src={image}
+                    alt={title}
+                    fill
+                    className="object-cover transform group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition duration-300 flex items-center justify-center">
                   <h3 className="text-white text-xl font-semibold drop-shadow">
                     {title}

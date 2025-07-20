@@ -1,8 +1,7 @@
 'use client'
 
 import { MapContainer, TileLayer, Marker, Tooltip } from 'react-leaflet'
-import L from 'leaflet'
-import type { LatLngExpression } from 'leaflet'
+import L, { LatLngExpression, LeafletMouseEvent } from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 
 // Fix default marker icons (this prevents missing marker icons)
@@ -126,7 +125,6 @@ const ports: Port[] = [
     position: [46.35, -72.43],
     cargo: ['Coal'],
   },
-  // ⛔ Removed Sept-Îles / Port-Cartier per your request
 ]
 
 export default function InteractiveMap() {
@@ -134,26 +132,26 @@ export default function InteractiveMap() {
     <MapContainer
       center={[46, -63]}
       zoom={6}
-      scrollWheelZoom={true}
-      touchZoom={true}
-      zoomControl={true}
+      scrollWheelZoom
+      touchZoom
+      zoomControl
       className="w-full h-full z-10"
     >
       <TileLayer
         url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>'
       />
-      {ports.map((port) => (
-        <Marker 
-          key={port.name} 
+      {ports.map((port: Port) => (
+        <Marker
+          key={port.name}
           position={port.position}
           eventHandlers={{
-            click: () => {
+            click: (e: LeafletMouseEvent) => {
               console.log(`Map click: ${port.name}`)
-              //TODO: Replace with realanalytics call
+              // TODO: Replace with analytics call
             },
           }}
-        >  
+        >
           <Tooltip direction="top" offset={[0, -10]} opacity={1}>
             <div className="bg-white p-2 rounded shadow max-w-xs text-black">
               <strong>{port.name}</strong>
