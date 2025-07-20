@@ -1,3 +1,5 @@
+// app/about/page.tsx
+
 import { Metadata } from 'next'
 import Image from 'next/image'
 import MotionFadeIn from '@/components/MotionFadeIn'
@@ -35,19 +37,38 @@ export default function AboutPage() {
             />
           </div>
           <MotionFadeIn>
-            <h2 className="text-3xl font-bold text-blue-900">Our Story</h2>
-            <p className="text-lg leading-relaxed">
-              Founded to meet the growing need for reliable vessel support across Eastern Canada,
-              Breakwater Marine Solutions brings decades of maritime and logistics expertise to every port call.
+            <h2 className="text-3xl font-bold text-blue-900 mb-4">Our Story</h2>
+            <p className="text-lg leading-relaxed mb-4">
+              Breakwater Marine Solutions was founded to bring reliable, transparent and high-quality
+              maritime support across Eastern Canada.
             </p>
-            <p className="text-lg leading-relaxed">
-              Our team—comprising seasoned mariners, logistics specialists, and compliance experts—understands the
-              challenges of cold-water operations, tight schedules, and high regulatory standards.
+            <p className="text-lg leading-relaxed mb-4">
+              Our team brings decades of maritime and logistics expertise to every port call. We are comprised of
+              seasoned mariners, logistics specialists, and compliance experts—understanding the challenges of
+              cold-water operations, tight schedules, and high regulatory standards.
             </p>
             <p className="text-lg leading-relaxed text-blue-900 font-semibold">
-              We calm the waters for your port calls.
+              We are there to calm the waters for your port calls.
             </p>
           </MotionFadeIn>
+        </div>
+      </section>
+
+      {/* Experience + Mission Section */}
+      <section className="py-20 px-4 md:px-8 lg:px-16 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-blue-900 mb-6">Experience You Can Trust</h2>
+          <p className="text-lg leading-relaxed mb-8">
+            With deep knowledge of Canadian port operations, regulatory compliance, and commercial logistics,
+            our team ensures vessels are supported from arrival through departure. Whether it’s crew movements,
+            customs clearance, or critical spares, we manage each detail with care and precision.
+          </p>
+
+          <h2 className="text-3xl font-bold text-blue-900 mb-4">Our Mission</h2>
+          <p className="text-lg leading-relaxed">
+            To provide unmatched marine services that keep port calls efficient, compliant, and stress-free.
+            We prioritize responsiveness, local knowledge, and clear communication at every stage.
+          </p>
         </div>
       </section>
 
