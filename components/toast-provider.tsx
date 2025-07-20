@@ -1,40 +1,30 @@
 'use client'
 
-import * as Toast from '@radix-ui/react-toast'
-import { useState } from 'react'
+import { useState, createContext, useContext } from 'react'
 
-export function ToastProvider({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  const [open, setOpen] = useState(false)
-  const [message, setMessage] = useState('')
-
-  return (
-    <Toast.Provider swipeDirection="right">
-      {children}
-      <Toast.Root
-        open={open}
-        onOpenChange={setOpen}
-        className="fixed bottom-4 right-4 z-50 bg-white shadow-md rounded-md px-4 py-3 border border-gray-200 text-sm text-gray-900 w-[300px]"
-      >
-        <Toast.Title className="font-medium">{message}</Toast.Title>
-      </Toast.Root>
-      <Toast.Viewport className="fixed bottom-0 right-0 p-6 w-96 max-w-full outline-none" />
-    </Toast.Provider>
-  )
+interface ToastContextType {
+  showToast: (msg: string) => void
 }
 
-export function useToast() {
-  const [open, setOpen] = useState(false)
-  const [message, setMessage] = useState('')
+const ToastContext = createContext<ToastContextType | undefined>(undefined)
 
-  const trigger = (msg: string) => {
+export const useToast = () => {
+  const context = useContext(ToastContext)
+  if (!context) throw new Error('useToast must be used within ToastProvider')
+  return context
+}
+
+export function ToastProvider({ children }: { children: React.ReactNode }) {
+  const [, setMessage] = useState<string | null>(null)
+
+  const showToast = (msg: string) => {
     setMessage(msg)
-    setOpen(true)
-    setTimeout(() => setOpen(false), 4000)
+    // Add real implementation here
   }
 
-  return { open, setOpen, message, trigger }
+  return (
+    <ToastContext.Provider value={{ showToast }}>
+      {children}
+    </ToastContext.Provider>
+  )
 }
