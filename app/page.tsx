@@ -80,30 +80,32 @@ export default function HomePage() {
         </div>
 
         {/* ✅ Overlapping Get in Touch Box */}
-        <div className="absolute -bottom-28 right-4 md:right-12 bg-blue-900 text-white p-6 rounded-lg shadow-2xl z-10 w-[495px] h-[220px]">
-          <div className="mb-2">
-            <h3 className="text-xl font-bold">Ready for Smooth Sailing?</h3>
-            <div
-              className="h-0.5 bg-red-600 mt-1"
-              style={{ width: 'calc(100% - 20rem)' }}
-            />
+        <div className="absolute bottom-[-10rem] md:bottom-[-7rem] right-4 md:right-12 z-10">
+          <div className="bg-blue-900 text-white p-6 rounded-lg shadow-2xl w-full max-w-xs md:w-[495px] md:h-[220px]">
+            <div className="mb-2">
+              <h3 className="text-xl font-bold">Ready for Smooth Sailing?</h3>
+              <div
+                className="h-0.5 bg-red-600 mt-1"
+                style={{ width: 'calc(100% - 8rem)' }}
+              />
+            </div>
+            <p className="text-sm mb-4 mt-2">
+              With decades of hands-on experience, we ensure your port calls are
+              efficient, compliant, and stress-free — so you can focus on what
+              matters most.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block bg-white text-blue-900 font-semibold py-2 px-4 rounded hover:bg-gray-100 transition"
+            >
+              Contact Us
+            </Link>
           </div>
-          <p className="text-sm mb-4 mt-2">
-            With decades of hands-on experience, we ensure your port calls are
-            efficient, compliant, and stress-free — so you can focus on what
-            matters most.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-white text-blue-900 font-semibold py-2 px-4 rounded hover:bg-gray-100 transition"
-          >
-            Contact Us
-          </Link>
         </div>
       </section>
 
       {/* ✅ Spacer */}
-      <div className="h-44" />
+      <div className="h-44 md:h-56" />
 
       {/* ✅ Services Section */}
       <section

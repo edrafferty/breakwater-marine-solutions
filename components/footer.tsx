@@ -10,7 +10,7 @@ export function Footer() {
         </div>
         <div>
           <h4 className="font-semibold mb-2">Contact</h4>
-          <p>563 Lockview Road<br />Fall River, NS, B2T 1J1</p>
+          <p>536 Lockview Road<br />Fall River, NS, B2T 1J1</p>
           <p className="mt-2">📞 +1-902-579-9140</p>
           <p>✉️ <a href="mailto:ops@breakwatermarine.ca" className="underline">ops@breakwatermarine.ca</a></p>
         </div>
