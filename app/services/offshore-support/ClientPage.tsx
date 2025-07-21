@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 const testimonials = [
   {
     quote:
-      'Breakwater&apos;s support during our offshore wind project was outstanding. Every vessel movement was executed flawlessly.',
+      "Breakwater's support during our offshore wind project was outstanding. Every vessel movement was executed flawlessly.",
     author: 'Laura Chen, WindWave Energy',
   },
   {
@@ -43,7 +43,7 @@ export default function OffshoreSupportClientPage() {
               Offshore Wind Support
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg">
-              Supporting North America&apos;s wind energy transition with marine
+              Supporting North America's wind energy transition with marine
               logistics, vessel coordination, and agency services.
             </p>
           </motion.div>
@@ -70,7 +70,7 @@ export default function OffshoreSupportClientPage() {
           </p>
           <p className="text-lg mt-4">
             Our team works closely with developers, OEMs, and contractors to
-            support every phase of a wind project—whether you&apos;re laying cable
+            support every phase of a wind project—whether you're laying cable
             offshore, transporting turbine components, or managing crew logistics
             at remote ports.
           </p>
@@ -91,7 +91,7 @@ export default function OffshoreSupportClientPage() {
                 viewport={{ once: true }}
                 className="bg-white shadow-md p-6 rounded-lg"
               >
-                <p className="text-lg italic text-gray-700">&ldquo;{t.quote}&rdquo;</p>
+                <p className="text-lg italic text-gray-700">{`“${t.quote}”`}</p>
                 <p className="mt-2 text-sm font-medium text-gray-900">
                   — {t.author}
                 </p>
