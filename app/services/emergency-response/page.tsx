@@ -5,14 +5,20 @@ import { motion } from 'framer-motion'
 export default function EmergencyResponsePage() {
   return (
     <div className="bg-white text-gray-900">
-      {/* Hero */}
+      {/* Hero with Local Video */}
       <div className="relative h-[75vh] overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/services/emergency_response.jpg')" }}
-        />
-        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
-        <div className="relative z-10 flex items-center justify-center h-full px-4 text-center text-white">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/emerg.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm z-10" />
+        <div className="relative z-20 flex items-center justify-center h-full px-4 text-center text-white">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -26,7 +32,7 @@ export default function EmergencyResponsePage() {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Content Section */}
       <section className="py-16 px-4 max-w-5xl mx-auto space-y-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -46,7 +52,7 @@ export default function EmergencyResponsePage() {
         </motion.div>
       </section>
 
-      {/* Embedded Video */}
+      {/* Embedded YouTube Video */}
       <section className="bg-gray-100 py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
