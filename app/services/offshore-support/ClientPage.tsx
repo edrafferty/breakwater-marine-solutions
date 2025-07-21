@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 const testimonials = [
   {
     quote:
-      'Breakwater&apos;s support during our offshore wind project was outstanding. Every vessel movement was executed flawlessly.',
+      "Breakwater's support during our offshore wind project was outstanding. Every vessel movement was executed flawlessly.",
     author: 'Laura Chen, WindWave Energy',
   },
   {
