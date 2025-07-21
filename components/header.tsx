@@ -17,20 +17,17 @@ export function Header() {
           Breakwater Marine Solutions
         </Link>
 
-        {/* Desktop Nav & Phone */}
-        <div className="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-700 ml-auto">
-          <nav className="flex space-x-6">
-            <Link href="/">Home</Link>
-            <Link href="/services">Services</Link>
-            <Link href="/about">About</Link>
-            <Link href="/contact">Contact</Link>
-          </nav>
-          <a href="tel:+19025799140" className="text-blue-900 hover:underline">
+        {/* Desktop Phone Number */}
+        <div className="hidden md:block">
+          <a
+            href="tel:+19025799140"
+            className="bg-blue-800 text-white py-2 px-4 rounded-md text-sm font-medium hover:bg-blue-900 transition"
+          >
             +1 (902) 579-9140
           </a>
         </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Hamburger Button */}
         <button
           className="md:hidden text-gray-800"
           onClick={toggleMenu}
@@ -38,25 +35,33 @@ export function Header() {
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex space-x-6 text-sm font-medium text-gray-700">
+          <Link href="/">Home</Link>
+          <Link href="/services">Services</Link>
+          <Link href="/about">About</Link>
+          <Link href="/contact">Contact</Link>
+        </nav>
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-gray-900 text-white px-4 py-4 space-y-3">
-          <nav className="flex flex-col space-y-3 text-sm font-medium">
-            <Link href="/" onClick={() => setMenuOpen(false)} className="hover:text-gray-300">Home</Link>
-            <Link href="/services" onClick={() => setMenuOpen(false)} className="hover:text-gray-300">Services</Link>
-            <Link href="/about" onClick={() => setMenuOpen(false)} className="hover:text-gray-300">About</Link>
-            <Link href="/contact" onClick={() => setMenuOpen(false)} className="hover:text-gray-300">Contact</Link>
-          </nav>
+        <div className="md:hidden bg-white border-t border-gray-200 px-4 py-4">
+          <nav className="flex flex-col space-y-4 text-sm font-medium text-gray-700">
+            <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
+            <Link href="/services" onClick={() => setMenuOpen(false)}>Services</Link>
+            <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
+            <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
 
-          {/* CTA Phone Button */}
-          <a
-            href="tel:+19025799140"
-            className="mt-4 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 rounded-md font-semibold transition duration-200"
-          >
-            Call +1 (902) 579-9140
-          </a>
+            {/* Mobile Phone Button */}
+            <a
+              href="tel:+19025799140"
+              className="inline-block bg-blue-800 text-white text-center py-2 px-4 rounded-md font-semibold hover:bg-blue-900 transition"
+            >
+              +1 (902) 579-9140
+            </a>
+          </nav>
         </div>
       )}
     </header>
