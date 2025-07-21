@@ -91,7 +91,7 @@ export default function CustomsPage() {
             <h3 className="text-2xl font-semibold mb-4">What You Get with a Trusted Ship Agent</h3>
             <ul className="list-disc list-inside space-y-3 text-lg text-gray-700">
               <li>
-                <strong>Accurate, Timely Documentation:</strong> We ensure everything — from cargo manifests to B13 export declarations — is submitted completely and on time.
+                <strong>Accurate, Timely Documentation:</strong> We ensure everything — from cargo manifests to export declarations — is submitted completely and on time.
               </li>
               <li>
                 <strong>Real-Time Regulatory Knowledge:</strong> We stay current with CBSA procedural updates, sanctions changes, and federal marine policies.

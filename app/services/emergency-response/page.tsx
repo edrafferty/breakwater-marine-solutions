@@ -17,7 +17,7 @@ export default function EmergencyResponsePage() {
           <source src="/emerg.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm z-10" />
+        <div className="absolute inset-0 bg-black" />
         <div className="relative z-20 flex items-center justify-center h-full px-4 text-center text-white">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
