@@ -38,7 +38,7 @@ export default function CustomsPage() {
           <h2 className="text-3xl font-semibold mb-4">Navigating Border Controls</h2>
           <p className="text-lg">
             We work directly with CBSA, Transport Canada, and other federal agencies to make port arrivals seamless. Whether
-            it&aposs pre-arrival documentation or vessel inspections, our experienced team ensures compliance every step of the way.
+            it&apos;s pre-arrival documentation or vessel inspections, our experienced team ensures compliance every step of the way.
           </p>
         </motion.div>
 

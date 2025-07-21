@@ -11,7 +11,7 @@ export default function SupplyChainPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/services/supply_chain.png')" }}
         />
-        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-black" />
         <div className="relative z-10 flex items-center justify-center h-full px-4 text-center text-white">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
