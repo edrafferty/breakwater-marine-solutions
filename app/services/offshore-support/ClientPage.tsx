@@ -29,7 +29,7 @@ export default function OffshoreSupportClientPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/services/offshore2.jpg')" }}
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 flex items-center justify-center h-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

@@ -14,6 +14,10 @@ export default function ShipAgencyPage() {
         className="parallax text-white py-48 px-4 text-center"
         style={{ backgroundImage: "url('/services/port_agency_services.jpg')" }}
       >
+        {/* Black overlay with 30% opacity */}
+        <div className="absolute inset-0 bg-black opacity-30" />
+
+        {/* Content */}
         <div className="max-w-4xl mx-auto drop-shadow">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
             Reliable Ship Agency Services
