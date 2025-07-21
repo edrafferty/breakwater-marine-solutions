@@ -43,7 +43,7 @@ export default function OffshoreSupportClientPage() {
               Offshore Wind Support
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg">
-              Supporting North America%apos;s wind energy transition with marine
+              Supporting North America's wind energy transition with marine
               logistics, vessel coordination, and agency services.
             </p>
           </motion.div>
