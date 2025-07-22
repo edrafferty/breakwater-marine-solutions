@@ -1,7 +1,18 @@
-"use client"
+'use client'
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import cbsaBoat from '@/public/services/cbsa-boat.jpg'
+import declaration from '@/public/services/declaration.jpg'
+import compliance from '@/public/services/regulations-compliance.jpg'
+import { defaultMetadata } from '@/lib/metadata'
+
+export const metadata = {
+  ...defaultMetadata,
+  title: 'Customs & Regulatory | Breakwater Marine Solutions',
+  description:
+    'Ensuring vessels meet Canadian regulatory requirements swiftly and without delays.',
+}
 
 export default function CustomsPage() {
   return (
@@ -10,7 +21,7 @@ export default function CustomsPage() {
       <div className="relative h-[75vh] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/services/cbsa-boat.jpg')" }}
+          style={{ backgroundImage: `url(${cbsaBoat.src})` }}
         />
         <div className="absolute inset-0 bg-black opacity-30" />
         <div className="relative z-10 flex items-center justify-center h-full px-4 text-center text-white">
@@ -37,8 +48,8 @@ export default function CustomsPage() {
         >
           <h2 className="text-3xl font-semibold mb-4">Navigating Border Controls</h2>
           <p className="text-lg">
-            We work directly with CBSA, Transport Canada, and other federal agencies to make port arrivals seamless. Whether
-            it&apos;s pre-arrival documentation or vessel inspections, our experienced team ensures compliance every step of the way.
+            We work directly with CBSA, Transport Canada, and other federal agencies to make port arrivals seamless.
+            Whether it&apos;s pre-arrival documentation or vessel inspections, our experienced team ensures compliance every step of the way.
           </p>
         </motion.div>
       </section>
@@ -53,10 +64,9 @@ export default function CustomsPage() {
             viewport={{ once: true }}
           >
             <Image
-              src="/services/declaration.jpg"
+              src={declaration}
               alt="Declaration Forms"
-              width={500}
-              height={340}
+              placeholder="blur"
               className="rounded-lg shadow"
             />
           </motion.div>
@@ -69,8 +79,7 @@ export default function CustomsPage() {
           >
             <h3 className="text-2xl font-semibold mb-4">Why Having a Ship Agent Matters</h3>
             <p className="text-lg mb-4">
-              In today&apos;s highly regulated global shipping environment, the importance of working with a knowledgeable local ship agent cannot be overstated —
-              especially when it comes to customs, documentation, and regulatory compliance.
+              In today&apos;s highly regulated global shipping environment, the importance of working with a knowledgeable local ship agent cannot be overstated — especially when it comes to customs, documentation, and regulatory compliance.
             </p>
             <p className="text-lg">
               At Breakwater Marine Solutions, we act as a critical interface between your vessel and Canadian customs authorities.
@@ -90,24 +99,12 @@ export default function CustomsPage() {
           >
             <h3 className="text-2xl font-semibold mb-4">What You Get with a Trusted Ship Agent</h3>
             <ul className="list-disc list-inside space-y-3 text-lg text-gray-700">
-              <li>
-                <strong>Accurate, Timely Documentation:</strong> We ensure everything — from cargo manifests to export declarations — is submitted completely and on time.
-              </li>
-              <li>
-                <strong>Real-Time Regulatory Knowledge:</strong> We stay current with CBSA procedural updates, sanctions changes, and federal marine policies.
-              </li>
-              <li>
-                <strong>Risk Reduction & Penalty Avoidance:</strong> We proactively audit documentation and workflows to prevent issues before they arise.
-              </li>
-              <li>
-                <strong>Crew Clearance & Visa Handling:</strong> We manage immigration protocols, transit visas, and port health clearances — all under tight timelines.
-              </li>
-              <li>
-                <strong>Port Authority Liaison:</strong> We act on your behalf in all dealings with CBSA, quarantine, and local officials.
-              </li>
-              <li>
-                <strong>Terminal & Broker Coordination:</strong> We align with terminals and customs brokers for cargo inspections, holds, and releases with minimal disruption.
-              </li>
+              <li><strong>Accurate, Timely Documentation:</strong> We ensure everything — from cargo manifests to export declarations — is submitted completely and on time.</li>
+              <li><strong>Real-Time Regulatory Knowledge:</strong> We stay current with CBSA procedural updates, sanctions changes, and federal marine policies.</li>
+              <li><strong>Risk Reduction & Penalty Avoidance:</strong> We proactively audit documentation and workflows to prevent issues before they arise.</li>
+              <li><strong>Crew Clearance & Visa Handling:</strong> We manage immigration protocols, transit visas, and port health clearances — all under tight timelines.</li>
+              <li><strong>Port Authority Liaison:</strong> We act on your behalf in all dealings with CBSA, quarantine, and local officials.</li>
+              <li><strong>Terminal & Broker Coordination:</strong> We align with terminals and customs brokers for cargo inspections, holds, and releases with minimal disruption.</li>
             </ul>
           </motion.div>
 
@@ -118,10 +115,9 @@ export default function CustomsPage() {
             viewport={{ once: true }}
           >
             <Image
-              src="/services/regulations-compliance.jpg"
+              src={compliance}
               alt="Compliance Meeting"
-              width={500}
-              height={340}
+              placeholder="blur"
               className="rounded-lg shadow"
             />
           </motion.div>
