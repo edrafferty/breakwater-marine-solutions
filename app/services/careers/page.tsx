@@ -39,7 +39,7 @@ export default function CareersPage() {
           break into the maritime industry, we&apos;re always looking for passionate individuals to join us.
         </p>
         <p className="text-lg text-gray-700 leading-relaxed mt-4">
-          Discover a rewarding career path with us — because we want you to thrive in an environment where you're valued, supported, and empowered to do your best work.
+          Discover a rewarding career path with us — because we want you to thrive in an environment where you&apos;re valued, supported, and empowered to do your best work.
         </p>
       </section>
 
