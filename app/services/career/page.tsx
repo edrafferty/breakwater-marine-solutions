@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { defaultMetadata } from '@/lib/metadata'
 import { Button } from '@/components/ui/button'
-import heroImg from '@/public/images/careers.hero.jpg'
+import heroImg from '@/public/images/careers_hero.jpg'
 import Link from 'next/link'
 
 export const metadata = {
