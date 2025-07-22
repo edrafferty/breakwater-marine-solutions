@@ -35,11 +35,11 @@ export default function CareersPage() {
         <h2 className="text-3xl font-semibold mb-4">Join Our Crew</h2>
         <p className="text-lg text-gray-700 leading-relaxed">
           At Breakwater Marine Solutions, we foster a supportive, inclusive, and encouraging work environment
-          where each team member plays a vital role. Whether you&apos;re an experienced mariner or looking to
-          break into the maritime industry, we&apos;re always looking for passionate individuals to join us.
+          where each team member plays a vital role. Whether you're an experienced mariner or looking to
+          break into the maritime industry, we're always looking for passionate individuals to join us.
         </p>
         <p className="text-lg text-gray-700 leading-relaxed mt-4">
-          Discover a rewarding career path with us — because we want you to thrive in an environment where you&rsquo;re valued, supported, and empowered to do your best work.
+          Discover a rewarding career path with us — because we want you to thrive in an environment where you're valued, supported, and empowered to do your best work.
         </p>
       </section>
 
@@ -48,22 +48,24 @@ export default function CareersPage() {
         <div className="max-w-4xl mx-auto px-6">
           <h3 className="text-2xl font-semibold text-center mb-8">Current Openings</h3>
           <div className="grid gap-6">
+            {/* Accountant Posting */}
             <div className="bg-white rounded-xl shadow-md p-6">
-              <h4 className="text-xl font-medium mb-2">Position Title 1</h4>
+              <h4 className="text-xl font-medium mb-2">Accountant</h4>
               <p className="text-gray-600 mb-4">
-                A brief summary of the first job posting will go here. Learn more on the detailed posting.
+                We're looking for an organized and detail-oriented Accountant to join our shore-based operations team. Bring your financial expertise to a growing marine company.
               </p>
-              <Link href="/services/career/position-title-1">
+              <Link href="/careers/accountant">
                 <Button>View Job Details</Button>
               </Link>
             </div>
 
+            {/* Boarding Agent Posting */}
             <div className="bg-white rounded-xl shadow-md p-6">
-              <h4 className="text-xl font-medium mb-2">Position Title 2</h4>
+              <h4 className="text-xl font-medium mb-2">Boarding Agent</h4>
               <p className="text-gray-600 mb-4">
-                A brief summary of the second job posting will go here. Learn more on the detailed posting.
+                Breakwater is seeking a reliable, fast-paced Boarding Agent to assist vessel operations at port. Be the key liaison between ship and shore.
               </p>
-              <Link href="/services/career/position-title-2">
+              <Link href="/careers/boarding-agent">
                 <Button>View Job Details</Button>
               </Link>
             </div>
