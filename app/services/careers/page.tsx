@@ -52,7 +52,7 @@ export default function CareersPage() {
               <p className="text-gray-600 mb-4">
                 {"We're looking for an organized and detail-oriented Accountant to join our shore-based operations team. Bring your financial expertise to a growing marine company."}
               </p>
-              <Link href="/careers/accountant">
+              <Link href="/services/careers/accountant">
                 <Button>View Job Details</Button>
               </Link>
             </div>
@@ -63,7 +63,7 @@ export default function CareersPage() {
               <p className="text-gray-600 mb-4">
                 {"Breakwater is seeking a reliable, fast-paced Boarding Agent to assist vessel operations at port. Be the key liaison between ship and shore."}
               </p>
-              <Link href="/careers/boarding-agent">
+              <Link href="/services/careers/boarding-agent">
                 <Button>View Job Details</Button>
               </Link>
             </div>
