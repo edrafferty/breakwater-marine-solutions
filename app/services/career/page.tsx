@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import { defaultMetadata } from '@/lib/metadata'
 import { Button } from '@/components/ui/button'
@@ -21,8 +19,8 @@ export default function CareersPage() {
         <Image
           src={heroImg}
           alt="Careers at Breakwater Marine Solutions"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: 'cover' }}
           priority
         />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
