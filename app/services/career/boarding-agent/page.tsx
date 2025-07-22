@@ -9,12 +9,13 @@ export const metadata = {
 export default function BoardingAgentPage() {
   return (
     <div>
-      <section className="relative w-full h-535px">
+      <section className="relative w-full h-96">
         <Image
           src={heroImg}
           alt="Boarding Agent at Breakwater Marine Solutions"
           layout="fill"
-          objectFit="cover"
+          objectFit="contain"
+          objectPosition="top"  // anchors the image to the top so more of the top part shows
           className="absolute inset-0"
         />
         <div className="absolute inset-0 bg-black opacity-50" />
