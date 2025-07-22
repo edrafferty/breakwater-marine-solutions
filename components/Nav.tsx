@@ -17,7 +17,6 @@ export default function Nav() {
     ['customs-regulatory', 'Customs & Regulatory'],
     ['supply-chain-coordination', 'Supply Chain Coordination'],
     ['emergency-response', 'Emergency Response'],
-    ['careers', 'Careers'],
   ]
 
   return (
@@ -60,6 +59,7 @@ export default function Nav() {
             </div>
           </div>
 
+          <Link href="/services/careers" className="hover:text-blue-800">Careers</Link>
           <Link href="/team" className="hover:text-blue-800">Team</Link>
           <Link href="/contact" className="hover:text-blue-800">Contact</Link>
         </div>
@@ -102,6 +102,7 @@ export default function Nav() {
             )}
           </div>
 
+          <Link href="/services/careers" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Careers</Link>
           <Link href="/team" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Team</Link>
           <Link href="/contact" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
         </div>

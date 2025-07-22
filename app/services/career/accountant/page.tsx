@@ -42,7 +42,7 @@ export default function AccountantPage() {
 
         <h3 className="mt-6 text-2xl font-semibold">Qualifications</h3>
         <ul className="list-disc pl-6 mt-2">
-          <li>Bachelor's degree in Accounting or related field.</li>
+          <li>Bachelor&apos;s degree in Accounting or related field.</li>
           <li>Minimum of 3 years of accounting experience, preferably in the maritime industry.</li>
           <li>Strong knowledge of accounting software and Microsoft Excel.</li>
           <li>Excellent attention to detail and organizational skills.</li>
