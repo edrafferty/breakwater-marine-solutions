@@ -34,12 +34,10 @@ export default function CareersPage() {
       <section className="max-w-4xl mx-auto py-16 px-6 text-center">
         <h2 className="text-3xl font-semibold mb-4">Join Our Crew</h2>
         <p className="text-lg text-gray-700 leading-relaxed">
-          At Breakwater Marine Solutions, we foster a supportive, inclusive, and encouraging work environment
-          where each team member plays a vital role. Whether you're an experienced mariner or looking to
-          break into the maritime industry, we&apos;re always looking for passionate individuals to join us.
+          {"At Breakwater Marine Solutions, we foster a supportive, inclusive, and encouraging work environment where each team member plays a vital role. Whether you're an experienced mariner or looking to break into the maritime industry, we're always looking for passionate individuals to join us."}
         </p>
         <p className="text-lg text-gray-700 leading-relaxed mt-4">
-          Discover a rewarding career path with us — because we want you to thrive in an environment where you&apos;re valued, supported, and empowered to do your best work.
+          {"Discover a rewarding career path with us — because we want you to thrive in an environment where you're valued, supported, and empowered to do your best work."}
         </p>
       </section>
 
@@ -52,7 +50,7 @@ export default function CareersPage() {
             <div className="bg-white rounded-xl shadow-md p-6">
               <h4 className="text-xl font-medium mb-2">Accountant</h4>
               <p className="text-gray-600 mb-4">
-                We&apos;re looking for an organized and detail-oriented Accountant to join our shore-based operations team. Bring your financial expertise to a growing marine company.
+                {"We're looking for an organized and detail-oriented Accountant to join our shore-based operations team. Bring your financial expertise to a growing marine company."}
               </p>
               <Link href="/careers/accountant">
                 <Button>View Job Details</Button>
@@ -63,7 +61,7 @@ export default function CareersPage() {
             <div className="bg-white rounded-xl shadow-md p-6">
               <h4 className="text-xl font-medium mb-2">Boarding Agent</h4>
               <p className="text-gray-600 mb-4">
-                Breakwater is seeking a reliable, fast-paced Boarding Agent to assist vessel operations at port. Be the key liaison between ship and shore.
+                {"Breakwater is seeking a reliable, fast-paced Boarding Agent to assist vessel operations at port. Be the key liaison between ship and shore."}
               </p>
               <Link href="/careers/boarding-agent">
                 <Button>View Job Details</Button>
