@@ -9,7 +9,7 @@ export const metadata = {
 export default function BoardingAgentPage() {
   return (
     <div>
-      <section className="relative w-full h-96">
+      <section className="relative w-full h-535px">
         <Image
           src={heroImg}
           alt="Boarding Agent at Breakwater Marine Solutions"
@@ -18,7 +18,7 @@ export default function BoardingAgentPage() {
           objectPosition="top"  // anchors the image to the top so more of the top part shows
           className="absolute inset-0"
         />
-        <div className="absolute inset-0 bg-black opacity-50" />
+        <div className="absolute inset-0 bg-black opacity-20" />
         <div className="relative z-10 text-center text-white p-8">
           <h1 className="text-4xl font-bold">Boarding Agent</h1>
           <p className="mt-2 text-xl">Ensure smooth vessel operations with Breakwater Marine Solutions.</p>
