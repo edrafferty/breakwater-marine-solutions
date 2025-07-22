@@ -20,7 +20,7 @@ export function Header() {
         {/* Desktop Phone Number */}
         <div className="hidden md:block">
           <a
-            href="tel:+19025799140"
+            href="tel:+1 (902) 579-9140"
             className="bg-blue-800 text-white py-2 px-4 rounded-md text-sm font-medium hover:bg-blue-900 transition"
           >
             +1 (902) 579-9140

@@ -11,7 +11,7 @@ export const team: TeamMember[] = [
     name: "Ed Rafferty",
     role: "President & Director of Operations",
     image: "/team/ed-rafferty.jpg",
-    linkedin: "https://www.linkedin.com/in/ed-raffertybaa43a51", // Replace with actual link
+    linkedin: "https://www.linkedin.com/in/ed-rafferty-baa43a51", // Actual link
   },
   {
     name: "Member 2",
