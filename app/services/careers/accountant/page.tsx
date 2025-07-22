@@ -9,7 +9,7 @@ export const metadata = {
 export default function AccountantPage() {
   return (
     <div>
-      <section className="relative w-full h-96">
+      <section className="relative w-full h-535px">
         <Image
           src={heroImg}
           alt="Accountant at Breakwater Marine Solutions"

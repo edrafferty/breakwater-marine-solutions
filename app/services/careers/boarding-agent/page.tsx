@@ -9,7 +9,7 @@ export const metadata = {
 export default function BoardingAgentPage() {
   return (
     <div>
-      <section className="relative w-full h-96">
+      <section className="relative w-full h-535px">
         <Image
           src={heroImg}
           alt="Boarding Agent at Breakwater Marine Solutions"
