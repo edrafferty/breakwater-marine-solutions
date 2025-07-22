@@ -14,7 +14,7 @@ export default function AccountantPage() {
           src={heroImg}
           alt="Accountant at Breakwater Marine Solutions"
           layout="fill"
-          objectFit="cover"
+          objectFit="contain"
           objectPosition="top"  // anchors the image to the top so more of the top part shows
           className="absolute inset-0"
         />
