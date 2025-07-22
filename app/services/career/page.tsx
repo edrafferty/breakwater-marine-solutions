@@ -35,8 +35,8 @@ export default function CareersPage() {
         <h2 className="text-3xl font-semibold mb-4">Join Our Crew</h2>
         <p className="text-lg text-gray-700 leading-relaxed">
           At Breakwater Marine Solutions, we foster a supportive, inclusive, and encouraging work environment
-          where each team member plays a vital role. Whether you're an experienced mariner or looking to
-          break into the maritime industry, we're always looking for passionate individuals to join us.
+          where each team member plays a vital role. Whether you&apos;re an experienced mariner or looking to
+          break into the maritime industry, we&apos;re always looking for passionate individuals to join us.
         </p>
         <p className="text-lg text-gray-700 leading-relaxed mt-4">
           Discover a rewarding career path with us — because we want you to thrive in an environment where you&rsquo;re valued, supported, and empowered to do your best work.
