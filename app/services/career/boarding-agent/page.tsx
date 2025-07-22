@@ -14,7 +14,7 @@ export default function BoardingAgentPage() {
           src={heroImg}
           alt="Boarding Agent at Breakwater Marine Solutions"
           layout="fill"
-          objectFit="contain"
+          objectFit="cover"
           objectPosition="top"  // anchors the image to the top so more of the top part shows
           className="absolute inset-0"
         />
