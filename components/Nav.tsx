@@ -1,5 +1,3 @@
-// components/Nav.tsx
-
 'use client'
 
 import Link from 'next/link'
@@ -11,6 +9,16 @@ export default function Nav() {
   const [servicesOpen, setServicesOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+
+  const services = [
+    ['ship-agency', 'Ship Agency'],
+    ['crew-change-logistics', 'Crew Change & Logistics'],
+    ['offshore-support', 'Offshore Support'],
+    ['customs-regulatory', 'Customs & Regulatory'],
+    ['supply-chain-coordination', 'Supply Chain Coordination'],
+    ['emergency-response', 'Emergency Response'],
+    ['careers', 'Careers'],
+  ]
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
@@ -40,14 +48,7 @@ export default function Nav() {
                 servicesOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
               )}
             >
-              {[
-                ['ship-agency', 'Ship Agency'],
-                ['crew-change-logistics', 'Crew Change & Logistics'],
-                ['offshore-support', 'Offshore Support'],
-                ['customs-regulatory', 'Customs & Regulatory'],
-                ['supply-chain-coordination', 'Supply Chain Coordination'],
-                ['emergency-response', 'Emergency Response'],
-              ].map(([path, name]) => (
+              {services.map(([path, name]) => (
                 <Link
                   key={path}
                   href={`/services/${path}`}
@@ -60,7 +61,6 @@ export default function Nav() {
           </div>
 
           <Link href="/team" className="hover:text-blue-800">Team</Link>
-          <Link href="/services/careers" className="hover:text-blue-800">Careers</Link>
           <Link href="/contact" className="hover:text-blue-800">Contact</Link>
         </div>
 
@@ -88,14 +88,7 @@ export default function Nav() {
             </button>
             {mobileServicesOpen && (
               <div className="mt-2 ml-2">
-                {[
-                  ['ship-agency', 'Ship Agency'],
-                  ['crew-change-logistics', 'Crew Change & Logistics'],
-                  ['offshore-support', 'Offshore Support'],
-                  ['customs-regulatory', 'Customs & Regulatory'],
-                  ['supply-chain-coordination', 'Supply Chain Coordination'],
-                  ['emergency-response', 'Emergency Response'],
-                ].map(([path, name]) => (
+                {services.map(([path, name]) => (
                   <Link
                     key={path}
                     href={`/services/${path}`}
@@ -110,7 +103,6 @@ export default function Nav() {
           </div>
 
           <Link href="/team" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Team</Link>
-          <Link href="/services/careers" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Careers</Link>
           <Link href="/contact" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
         </div>
       )}
