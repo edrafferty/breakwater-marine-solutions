@@ -1,4 +1,4 @@
-// 🚫 Do NOT use 'use client' in this file
+
 
 import Image from 'next/image'
 import { Metadata } from 'next'
