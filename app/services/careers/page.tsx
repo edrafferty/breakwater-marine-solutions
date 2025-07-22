@@ -1,82 +1,68 @@
-'use client'
+// 🚫 Do NOT use 'use client' in this file
 
 import Image from 'next/image'
+import { Metadata } from 'next'
+import Link from 'next/link'
+import boardingImg from '@/public/images/boarding_agent.jpg'
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
-import { Metadata } from 'next'
-import boardingImg from '@/public/images/boarding_agent.jpg'
 
 export const metadata: Metadata = {
   title: 'Boarding Agent - Careers | Breakwater Marine Solutions',
   description: 'Join our team as a Boarding Agent and help deliver professional ship agency services in Eastern Canada.',
 }
 
-export default function BoardingAgent() {
+export default function CareersPage() {
   return (
-    <div className="min-h-screen bg-white text-blue-900">
-      {/* Animated Hero Section */}
-      <motion.div
-        className="relative h-[60vh] overflow-hidden"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
+    <div className="min-h-screen bg-white">
+      {/* Animated Hero */}
+      <div className="relative h-[60vh] overflow-hidden">
         <Image
           src={boardingImg}
-          alt="Boarding Agent at dock"
+          alt="Boarding Agent at Work"
           fill
-          className="object-cover object-center"
           priority
+          className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white text-center px-4">
-            We're Hiring: Boarding Agent
-          </h1>
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-6xl text-white font-bold text-center px-4"
+          >
+            Join Our Crew — Now Hiring a Boarding Agent
+          </motion.h1>
         </div>
-      </motion.div>
+      </div>
 
-      {/* Job Details Section */}
-      <section className="max-w-4xl mx-auto px-4 py-12">
-        <motion.div
-          initial={{ y: 40, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-3xl font-semibold mb-6">Position: Ship Agency Representative (Boarding Agent)</h2>
+      {/* Job Description */}
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-semibold mb-6">Boarding Agent / Ship Agency Representative</h2>
+        <p className="mb-4">
+          Breakwater Marine Solutions is seeking a proactive and professional Boarding Agent to join our growing team. This role is key to the delivery of superior port agency services to vessels calling Eastern Canadian ports.
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Attend vessels during port calls and liaise with ship crews, terminal staff, and authorities</li>
+          <li>Ensure smooth coordination of port formalities, supplies, and crew logistics</li>
+          <li>Represent Breakwater with professionalism and commitment to client service</li>
+        </ul>
 
-          <p className="mb-4">
-            Breakwater Marine Solutions is seeking a proactive and professional Boarding Agent to join our growing team. This is a vital
-            frontline position involving ship boarding, crew coordination, and 24/7 communication with vessel masters, port officials,
-            and clients. 
-          </p>
+        <h3 className="text-2xl font-medium mb-4">Requirements:</h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Valid driver’s license and ability to travel locally</li>
+          <li>Strong communication and problem-solving skills</li>
+          <li>Availability to work flexible hours (vessels arrive 24/7)</li>
+          <li>Marine, logistics, or operations background preferred</li>
+        </ul>
 
-          <h3 className="text-xl font-medium mt-6 mb-2">Responsibilities:</h3>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Attend vessels upon arrival and departure to handle all operational requirements.</li>
-            <li>Ensure timely and accurate communications between ship and shore stakeholders.</li>
-            <li>Submit documentation to port authorities and ensure regulatory compliance.</li>
-            <li>Support crew change logistics, customs clearance, and provisioning requests.</li>
-            <li>Be available for ship calls, including evenings, weekends, and holidays.</li>
-          </ul>
+        <p className="mb-6">
+          If you’re passionate about the maritime industry and want to be part of a fast-growing, client-focused agency, we want to hear from you.
+        </p>
 
-          <h3 className="text-xl font-medium mt-6 mb-2">Qualifications:</h3>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Previous experience in ship agency or maritime operations preferred.</li>
-            <li>Strong communication and organizational skills.</li>
-            <li>Valid driver’s license and access to a vehicle.</li>
-            <li>Comfortable working in a fast-paced and unpredictable environment.</li>
-            <li>Familiarity with Canadian port regulations an asset.</li>
-          </ul>
-
-          <h3 className="text-xl font-medium mt-6 mb-2">Location & Availability:</h3>
-          <p className="mb-4">Eastern Canada (flexible). This position requires availability for on-call duty and irregular hours.</p>
-
-          <h3 className="text-xl font-medium mt-6 mb-2">How to Apply:</h3>
-          <p className="mb-6">Send your resume and cover letter to <a className="text-blue-700 underline" href="mailto:careers@breakwatermarine.ca">careers@breakwatermarine.ca</a>. We thank all applicants for their interest, however only those selected for an interview will be contacted.</p>
-
-          <Button className="mt-4">Apply Now</Button>
-        </motion.div>
+        <Link href="mailto:careers@breakwatermarinesolutions.com?subject=Boarding%20Agent%20Application">
+          <Button>Apply Now</Button>
+        </Link>
       </section>
     </div>
   )

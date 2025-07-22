@@ -1,3 +1,5 @@
+// components/Nav.tsx
+
 'use client'
 
 import Link from 'next/link'
@@ -7,10 +9,8 @@ import { cn } from '@/lib/utils'
 
 export default function Nav() {
   const [servicesOpen, setServicesOpen] = useState(false)
-  const [teamOpen, setTeamOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
-  const [mobileTeamOpen, setMobileTeamOpen] = useState(false)
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
@@ -59,26 +59,8 @@ export default function Nav() {
             </div>
           </div>
 
-          {/* Team Dropdown */}
-          <div
-            onMouseEnter={() => setTeamOpen(true)}
-            onMouseLeave={() => setTeamOpen(false)}
-            className="relative"
-          >
-            <button className="flex items-center gap-1 hover:text-blue-800">
-              Team <ChevronDown size={16} />
-            </button>
-            <div
-              className={cn(
-                'absolute top-full mt-2 w-56 bg-white shadow-lg rounded-md transition-all duration-200',
-                teamOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-              )}
-            >
-              <Link href="/team" className="block px-4 py-2 hover:bg-gray-100">Our Team</Link>
-              <Link href="/services/careers/boarding-agent" className="block px-4 py-2 hover:bg-gray-100">Careers</Link>
-            </div>
-          </div>
-
+          <Link href="/team" className="hover:text-blue-800">Team</Link>
+          <Link href="/services/careers" className="hover:text-blue-800">Careers</Link>
           <Link href="/contact" className="hover:text-blue-800">Contact</Link>
         </div>
 
@@ -127,34 +109,8 @@ export default function Nav() {
             )}
           </div>
 
-          {/* Mobile Team Dropdown */}
-          <div className="py-2">
-            <button
-              className="flex items-center gap-1 w-full text-left"
-              onClick={() => setMobileTeamOpen(!mobileTeamOpen)}
-            >
-              Team <ChevronDown size={16} className={cn('transform transition-transform', mobileTeamOpen && 'rotate-180')} />
-            </button>
-            {mobileTeamOpen && (
-              <div className="mt-2 ml-2">
-                <Link
-                  href="/team"
-                  className="block py-1 pl-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Our Team
-                </Link>
-                <Link
-                  href="/services/careers/boarding-agent"
-                  className="block py-1 pl-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Careers
-                </Link>
-              </div>
-            )}
-          </div>
-
+          <Link href="/team" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Team</Link>
+          <Link href="/services/careers" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Careers</Link>
           <Link href="/contact" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
         </div>
       )}
