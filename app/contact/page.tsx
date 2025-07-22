@@ -60,7 +60,7 @@ export default function ContactPage() {
       {/* HERO SECTION */}
       <section className="relative h-[400px] w-full bg-cover bg-center flex items-center justify-center text-white"
         style={{ backgroundImage: "url('/images/contact-hero.jpg')" }}>
-        <div className="absolute inset-0 bg-black/50 z-10" />
+        <div className="absolute inset-0 bg-black/25 z-10" />
         <div className="relative z-20 text-center px-4">
           <h1 className="text-4xl md:text-5xl font-bold">Get in Touch</h1>
           <p className="mt-4 text-lg max-w-2xl mx-auto">We’d love to hear from you. Whether it’s a quick question or a request for service, we’re here to help.</p>
@@ -73,17 +73,17 @@ export default function ContactPage() {
           {
             icon: <MapPin className="text-blue-700 w-8 h-8" />,
             title: 'Our Office',
-            text: '123 Harbour Road\nHalifax, NS B3J 2X1',
+            text: '536 Lockview Road\nFall River, NS B2T 1J1',
           },
           {
             icon: <Phone className="text-blue-700 w-8 h-8" />,
             title: 'Phone',
-            text: '+1 (902) 555-1234',
+            text: '+1 (902) 579-9140',
           },
           {
             icon: <Mail className="text-blue-700 w-8 h-8" />,
             title: 'Email',
-            text: 'info@breakwatermarine.ca',
+            text: 'contact@breakwatermarine.ca',
           },
         ].map((card, idx) => (
           <motion.div
