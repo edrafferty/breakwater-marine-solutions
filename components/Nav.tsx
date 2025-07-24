@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import { ChevronDown, Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -20,15 +21,17 @@ export default function Nav() {
   ]
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-white/90 backdrop-blur-md shadow-md sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="text-xl font-bold text-blue-900">
-          Breakwater Marine
+        {/* Logo and Company Name */}
+        <Link href="/" className="flex items-center gap-3">
+          <Image src="/logo.png" alt="Breakwater Marine Logo" width={40} height={40} />
+          <span className="text-xl font-bold text-blue-900">Breakwater Marine</span>
         </Link>
 
-        {/* Desktop Menu */}
+        {/* Desktop Contact Info */}
         <div className="hidden md:flex items-center gap-6">
+          <span className="text-sm text-gray-700">📞 902-579-9140</span>
           <Link href="/" className="hover:text-blue-800">Home</Link>
           <Link href="/about" className="hover:text-blue-800">About</Link>
 
@@ -75,6 +78,7 @@ export default function Nav() {
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div className="md:hidden px-4 pb-4">
+          <div className="py-2 text-sm text-gray-700">📞 902-579-9140</div>
           <Link href="/" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Home</Link>
           <Link href="/about" className="block py-2" onClick={() => setMobileMenuOpen(false)}>About</Link>
 
