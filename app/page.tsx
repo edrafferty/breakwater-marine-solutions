@@ -127,9 +127,10 @@ export default function HomePage() {
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  'Halifax, NS', 'Sydney, NS', 'Point Tupper, NS', 'Canso, NS',
-                  'Sheet Harbour, NS', 'Saint John, NB', 'Charlottetown, PE',
-                  'Corner Brook, NL', 'Port aux Basques, NL', 'Argentia, NL',
+                  'Halifax, NS', 'Sydney, NS', 'Point Tupper, NS', 'Mulgrave, NS',
+                  'Sheet Harbour, NS', 'Aulds Cove, NS', 'Little Narrows, NS',
+                  'Summerside, PE', 'Charlottetown, PE', 'Belledune, NB',
+                  'Saint John, NB', 'Bayside, NB', 'St. John&apos;s, NL',
                 ].map((port) => (
                   <div key={port} className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-blue-500 rounded-full" />
@@ -141,7 +142,7 @@ export default function HomePage() {
                 Whether your call is at a major terminal or a smaller harbor, Breakwater Marine ensures local knowledge, trusted contacts, and immediate response capability.
               </p>
               <p className="mt-4 text-gray-300 italic">
-                Looking for support at a different location? Let's talk — we are growing our reach continuously.
+                Looking for support at a different location? Let&apos;s talk — we are growing our reach continuously.
               </p>
             </div>
             <div>
