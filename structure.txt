@@ -30402,7 +30402,7 @@ window.svg
 
 ./public/images:
 Cargo-Docks.jpg
-Logo.png
+logo.png
 breakwater_sea.jpg
 favicon.png
 hero.jpg

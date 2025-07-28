@@ -114,7 +114,7 @@ export default function HomePage() {
       >
         <div className="absolute inset-0">
           <Image
-            src="/images/darkwater.jfif"
+            src="/images/dark_water.jpg"
             alt="Maritime port background"
             fill
             className="object-cover opacity-30"
