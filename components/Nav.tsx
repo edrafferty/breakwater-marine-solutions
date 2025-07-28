@@ -24,14 +24,20 @@ export default function Nav() {
     <header className="bg-white/90 backdrop-blur-md shadow-md sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo and Company Name */}
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3">        
           <Image src="/images/logo.png" alt="Breakwater Marine Logo" width={40} height={40} />
-          <span className="text-xl font-bold text-blue-900">Breakwater Marine</span>
+          <div className="flex flex-col sm:flex-row sm:flex-row sm:items-center gap-1">
+            <span className="text-xl font-bold text-blue-900">Breakwater Marine</span>
+            <span className="flex itmes-center text-sm text-gray-800 gap-1">
+              <span className="text-red-700 text-base">📞</span>
+              902-579-9140
+            </span>
+          </div>  
         </Link>
 
         {/* Desktop Contact Info */}
         <div className="hidden md:flex items-center gap-6">
-          <span className="text-sm text-gray-700">📞 902-579-9140</span>
+          
           <Link href="/" className="hover:text-blue-800">Home</Link>
           <Link href="/about" className="hover:text-blue-800">About</Link>
 
