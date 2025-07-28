@@ -25,7 +25,7 @@ export default function Nav() {
       <nav className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo and Company Name */}
         <Link href="/" className="flex items-center gap-3">
-          <Image src="/logo.png" alt="Breakwater Marine Logo" width={40} height={40} />
+          <Image src="/images/logo.png" alt="Breakwater Marine Logo" width={40} height={40} />
           <span className="text-xl font-bold text-blue-900">Breakwater Marine</span>
         </Link>
 
