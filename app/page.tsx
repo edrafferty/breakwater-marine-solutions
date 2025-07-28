@@ -104,6 +104,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ✅ Spacer */}
+      <div className="h-10 md:h-10" />
+
             {/* ✅ Custom Port Coverage Section */}
       <section
         id="stats-section"
@@ -111,7 +114,7 @@ export default function HomePage() {
       >
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1559825481-12a05cc00344?w=1920&h=1080&fit=crop&crop=center"
+            src="/images/darkwater.jfif"
             alt="Maritime port background"
             fill
             className="object-cover opacity-30"
@@ -166,7 +169,7 @@ export default function HomePage() {
       </section>
 
       {/* ✅ Spacer */}
-      <div className="h-44 md:h-56" />
+      <div className="h-10 md:h-10" />
 
       {/* ✅ Services Section */}
       <section
