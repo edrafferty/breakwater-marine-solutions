@@ -26,9 +26,9 @@ export default function Nav() {
         {/* Logo and Company Name */}
         <Link href="/" className="flex items-center gap-3">        
           <Image src="/images/logo.png" alt="Breakwater Marine Logo" width={40} height={40} />
-          <div className="flex flex-col sm:flex-row sm:flex-row sm:items-center gap-1">
+          <div className="flex flex-row items-end gap-3">
             <span className="text-xl font-bold text-blue-900">Breakwater Marine</span>
-            <span className="flex itmes-center text-sm text-gray-800 gap-1">
+            <span className="text-sm text-gray-700 flex items-end gap-1 pb-1">
               <span className="text-red-700 text-base">📞</span>
               902-579-9140
             </span>
