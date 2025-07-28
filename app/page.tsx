@@ -104,6 +104,63 @@ export default function HomePage() {
         </div>
       </section>
 
+            {/* ✅ Custom Port Coverage Section */}
+      <section
+        id="stats-section"
+        className="relative py-20 bg-black text-white"
+      >
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1559825481-12a05cc00344?w=1920&h=1080&fit=crop&crop=center"
+            alt="Maritime port background"
+            fill
+            className="object-cover opacity-30"
+            style={{ color: 'transparent' }}
+          />
+        </div>
+        <div className="relative container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold mb-6">Eastern Canadian Port Coverage</h2>
+              <p className="text-gray-300 mb-6">
+                We proudly serve all major ports across Atlantic Canada, providing full vessel agency support in:
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  'Halifax, NS', 'Sydney, NS', 'Point Tupper, NS', 'Canso, NS',
+                  'Sheet Harbour, NS', 'Saint John, NB', 'Charlottetown, PE',
+                  'Corner Brook, NL', 'Port aux Basques, NL', 'Argentia, NL',
+                ].map((port) => (
+                  <div key={port} className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                    <p>{port}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-6 text-gray-300">
+                Whether your call is at a major terminal or a smaller harbor, Breakwater Marine ensures local knowledge, trusted contacts, and immediate response capability.
+              </p>
+              <p className="mt-4 text-gray-300 italic">
+                Looking for support at a different location? Let's talk — we are growing our reach continuously.
+              </p>
+            </div>
+            <div>
+              <p className="text-blue-500 font-medium mb-2">Service Excellence and Industry Expertise</p>
+              <h2 className="text-4xl font-bold mb-6">Your Vessel, Our Priority.</h2>
+              <p className="text-gray-300 mb-6">
+                Our team comprises knowledgeable professionals with decades of experience in the maritime industry. We take pride in fostering long-term relationships with our clients, some of whom have trusted us with their vessel agency needs for over 30 years.
+              </p>
+              <p className="text-gray-300 mb-8">
+                Our reputation is built on a foundation of trust, reliability, and unmatched industry expertise. We are committed to being a stabilizing presence — "calming the water" — for shipowners, operators, and captains navigating complex port requirements.
+              </p>
+              <button className="bg-blue-600 text-white px-8 py-3 rounded font-medium hover:bg-blue-700 transition-colors">
+                DISCOVER MORE
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ✅ Spacer */}
       <div className="h-44 md:h-56" />
 
