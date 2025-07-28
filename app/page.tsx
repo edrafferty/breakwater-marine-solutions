@@ -152,7 +152,7 @@ export default function HomePage() {
                 Our team comprises knowledgeable professionals with decades of experience in the maritime industry. We take pride in fostering long-term relationships with our clients, some of whom have trusted us with their vessel agency needs for over 30 years.
               </p>
               <p className="text-gray-300 mb-8">
-                Our reputation is built on a foundation of trust, reliability, and unmatched industry expertise. We are committed to being a stabilizing presence — "calming the water" — for shipowners, operators, and captains navigating complex port requirements.
+                Our reputation is built on a foundation of trust, reliability, and unmatched industry expertise. We are committed to being a stabilizing presence &mdash; &quot;calming the water&quot; &mdash; for shipowners, operators, and captains navigating complex port requirements.
               </p>
               <button className="bg-blue-600 text-white px-8 py-3 rounded font-medium hover:bg-blue-700 transition-colors">
                 DISCOVER MORE
