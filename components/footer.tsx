@@ -19,7 +19,7 @@ export function Footer() {
           <ul className="space-y-1">
             <li>
               <a
-                href="https://www.linkedin.com"
+                href="https://www.www.linkedin.com/in/ed-rafferty-baa43a51"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
