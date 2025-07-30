@@ -63,7 +63,7 @@ export default function HomePage() {
         >
           <source src="/hero.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4">
+        <div className="absolute inset-0 bg-black/35 flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-lg">
             Breakwater Marine Solutions
           </h1>
@@ -133,7 +133,7 @@ export default function HomePage() {
                   'Halifax, NS', 'Sydney, NS', 'Point Tupper, NS', 'Mulgrave, NS',
                   'Sheet Harbour, NS', 'Aulds Cove, NS', 'Little Narrows, NS',
                   'Summerside, PE', 'Charlottetown, PE', 'Belledune, NB',
-                  'Saint John, NB', 'Bayside, NB', 'St. John&apos;s, NL',
+                  'Saint John, NB', 'Bayside, NB', 'St. Johns, NL',
                 ].map((port) => (
                   <div key={port} className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-blue-500 rounded-full" />
@@ -152,7 +152,7 @@ export default function HomePage() {
               <p className="text-blue-500 font-medium mb-2">Service Excellence and Industry Expertise</p>
               <h2 className="text-4xl font-bold mb-6">Your Vessel, Our Priority.</h2>
               <p className="text-gray-300 mb-6">
-                Our team comprises knowledgeable professionals with decades of experience in the maritime industry. We take pride in fostering long-term relationships with our clients, some of whom have trusted us with their vessel agency needs for over 30 years.
+                Our team comprises knowledgeable professionals with decades of experience in the maritime industry. We take pride in fostering long-term relationships with our clients, some of whom have trusted us with their vessel agency needs for over 20 years.
               </p>
               <p className="text-gray-300 mb-8">
                  Our reputation is built on a foundation of trust, reliability, and unmatched industry expertise. We are committed to being a stabilizing presence &mdash;{" "}
@@ -229,6 +229,74 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* ✅ Spacer */}
+      <div className="h-10 md:h-10" />
+      
+      <section
+        id="benefits-section"
+        alpha-section-id="benefits-section"
+        className="py-16 bg-gray-50"
+      >
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12" style={{ opacity: 1, transform: 'none' }}>
+            <p className="text-blue-600 font-medium mb-2">Vision for the Future</p>
+            <h2 className="text-4xl font-bold text-gray-900">
+              Navigating Excellence in Maritime Services
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* Card 1 */}
+            <div className="flex items-start space-x-4" style={{ opacity: 1, transform: 'none' }}>
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span className="text-blue-600 text-2xl">🚢</span>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Diversification and Innovation
+                </h3>
+                <p className="text-gray-600">
+                  Recognizing the changing landscape of the maritime industry, we are
+                  committed to diversifying our services. Breakwater Marine Solutions
+                  envisions extending its reach within the logistics supply chain,
+                  exploring new opportunities that go beyond traditional vessel agency work.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="flex items-start space-x-4" style={{ opacity: 1, transform: 'none' }}>
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span className="text-blue-600 text-2xl">🤝</span>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Commitment to Integrity and Compliance
+                </h3>
+                <p className="text-gray-600">
+                  At Breakwater Marine Solutions, integrity is a non-negotiable value.
+                  We are dedicated to maintaining a fair and competitive environment
+                  in all our endeavors and strictly adhering to all applicable laws
+                  and regulations governing our employees' activities in Canada.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Paragraph */}
+          <div className="mt-12 text-center" style={{ opacity: 1, transform: 'none' }}>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Breakwater Marine Solutions is not just a marine vessel agency; it is a
+              beacon of excellence in the maritime services industry. We look forward
+              to navigating new horizons, serving our clients, and contributing to the
+              continued growth of the maritime sector in Nova Scotia and beyond.
+            </p>
+          </div>
+        </div>
+      </section>
+           {/* ✅ Spacer */}
+      <div className="h-10 md:h-10" />  
+
     </main>
   )
 }
