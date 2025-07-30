@@ -277,7 +277,7 @@ export default function HomePage() {
                   At Breakwater Marine Solutions, integrity is a non-negotiable value.
                   We are dedicated to maintaining a fair and competitive environment
                   in all our endeavors and strictly adhering to all applicable laws
-                  and regulations governing our employees' activities in Canada.
+                  and regulations governing our employees&apos; activities in Canada.
                 </p>
               </div>
             </div>
