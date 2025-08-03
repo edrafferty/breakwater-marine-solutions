@@ -77,9 +77,9 @@ export default function Nav() {
         <div className="md:hidden">
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             {mobileMenuOpen ? (
-              <X size={24} className="text-white" />
+              <X size={24} className="text-blue" />
             ) : (
-              <Menu size={24} className="text-white" />
+              <Menu size={24} className="text-blue" />
             )}
           </button>
         </div>
