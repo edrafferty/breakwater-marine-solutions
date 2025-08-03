@@ -83,10 +83,10 @@ export default function Nav() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden px-4 pb-4">
+        <div className="md:hidden px-4 pb-4 bg-blue-950 text-white">
           <div className="py-2 text-sm text-gray-700">📞 902-579-9140</div>
-          <Link href="/" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-          <Link href="/about" className="block py-2" onClick={() => setMobileMenuOpen(false)}>About</Link>
+          <Link href="/" className="block py-2 hover:bg-blue-950 rounded px-2" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+          <Link href="/about" className="block py-2 hover:bg-blue-950 rounded px-2" onClick={() => setMobileMenuOpen(false)}>About</Link>
 
           {/* Mobile Services Dropdown */}
           <div className="py-2">
@@ -97,12 +97,12 @@ export default function Nav() {
               Services <ChevronDown size={16} className={cn('transform transition-transform', mobileServicesOpen && 'rotate-180')} />
             </button>
             {mobileServicesOpen && (
-              <div className="mt-2 ml-2">
+              <div className="mt-2 ml-2 bg-blue-900 rounded px-2 py-1">
                 {services.map(([path, name]) => (
                   <Link
                     key={path}
                     href={`/services/${path}`}
-                    className="block py-1 pl-2"
+                    className="block py-1 pl-2 hover:bg-blue-950 rounded px-2"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {name}
@@ -112,9 +112,9 @@ export default function Nav() {
             )}
           </div>
 
-          <Link href="/services/careers" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Careers</Link>
-          <Link href="/team" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Team</Link>
-          <Link href="/contact" className="block py-2" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+          <Link href="/services/careers" className="block py-1 hover:bg-blue-800 rounded px-2" onClick={() => setMobileMenuOpen(false)}>Careers</Link>
+          <Link href="/team" className="block py-1 hover:bg-blue-800 rounded px-2" onClick={() => setMobileMenuOpen(false)}>Team</Link>
+          <Link href="/contact" className="block py-1 hover:bg-blue-800 rounded px-2" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
         </div>
       )}
     </header>
