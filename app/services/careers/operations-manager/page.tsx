@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import heroImg from '@/public/images/operations-manager-hero.jpg';
+import heroImg from '@/public/images/ops-manager-hero.jpg';
 
 export const metadata = {
   title: 'Operations Manager | Breakwater Marine Solutions',
