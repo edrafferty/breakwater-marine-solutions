@@ -46,13 +46,13 @@ export default function CareersPage() {
         <div className="max-w-4xl mx-auto px-6">
           <h3 className="text-2xl font-semibold text-center mb-8">Current Openings</h3>
           <div className="grid gap-6">
-            {/* Accountant Posting */}
+            {/* Operations Manager Posting */}
             <div className="bg-white rounded-xl shadow-md p-6">
-              <h4 className="text-xl font-medium mb-2">Accountant</h4>
+              <h4 className="text-xl font-medium mb-2">Operations Manager</h4>
               <p className="text-gray-600 mb-4">
-                {"We're looking for an organized and detail-oriented Accountant to join our shore-based operations team. Bring your financial expertise to a growing marine company."}
+                {"We're looking for an organized and detail-oriented Operations Manager to join our shore-based operations team. Bring your expertise to a growing marine company."}
               </p>
-              <Link href="/services/careers/accountant">
+              <Link href="/services/careers/operations-manager">
                 <Button>View Job Details</Button>
               </Link>
             </div>

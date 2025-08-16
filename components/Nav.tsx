@@ -70,6 +70,7 @@ export default function Nav() {
 
           <Link href="/services/careers" className="hover:text-blue-800">Careers</Link>
           <Link href="/team" className="hover:text-blue-800">Team</Link>
+          <Link href="/partners" className="hover:text-blue-800">Partners</Link>
           <Link href="/contact" className="hover:text-blue-800">Contact</Link>
         </div>
 
@@ -118,6 +119,7 @@ export default function Nav() {
 
           <Link href="/services/careers" className="block py-1 hover:bg-blue-800 rounded px-2" onClick={() => setMobileMenuOpen(false)}>Careers</Link>
           <Link href="/team" className="block py-1 hover:bg-blue-800 rounded px-2" onClick={() => setMobileMenuOpen(false)}>Team</Link>
+          <Link href="/partners" className="block py-1 hover:bg-blue-800 rounded px-2" onClick={() => setMobileMenuOpen(false)}>Partners</Link>
           <Link href="/contact" className="block py-1 hover:bg-blue-800 rounded px-2" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
         </div>
       )}
