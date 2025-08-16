@@ -15,7 +15,7 @@ export default function ShipAgencyPage() {
         style={{ backgroundImage: "url('/services/port_agency_services.jpg')" }}
       >
         {/* Black overlay with 30% opacity */}
-        <div className="absolute inset-0 bg-black opacity-30" />
+        <div className="absolute inset-0 bg-black opacity-10" />
 
         {/* Content */}
         <div className="max-w-4xl mx-auto drop-shadow">
