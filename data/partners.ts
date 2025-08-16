@@ -23,7 +23,7 @@ export const partners: Partner[] = [
   {
     name: "Svitzer",
     description: "A global provider of towage and marine services, specializing in assisting large vessels with maneuvering in and out of ports and terminals",
-    logo: "/partners/svitzer-logo.png",
+    logo: "/partners/Svitzer-Logo.png",
     website: "https://www.svitzer.com",
   },
   {
