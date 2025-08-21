@@ -33,6 +33,12 @@ export const partners: Partner[] = [
     website: "https://porthalifax.ca",
   },
   {
+    name: "PF Collins",
+    description: "A leading Canadian provider of integrated international trade and project logistics services. Specialists in both offshore energy and marine sectors, delivering top of the line solutions that create leaner supply chains for thier clients",
+    logo: "/partners/pfc.png",
+    website: "https://www.pfcollins.com",
+  },
+  {
     name: "Svitzer",
     description: "A global provider of towage and marine services, specializing in assisting large vessels with maneuvering in and out of ports and terminals",
     logo: "/partners/Svitzer-Logo.png",
