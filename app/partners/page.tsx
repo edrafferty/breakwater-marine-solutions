@@ -16,7 +16,7 @@ export default function PartnersPage() {
       {/* Hero Section */}
       <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px]">
         <Image
-          src="/images/partners-hero.png" // 👈 put your hero image in /public/images/
+          src="/images/partners-hero.jpg" // 👈 put your hero image in /public/images/
           alt="Partners Hero"
           fill
           priority
